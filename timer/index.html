@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrraper">
+      <h1 class="title">타이머</h1>
+      <div class="timer-wrraper">
+        <div class="time-input-wrraper">
+          <div class="time-setter">
+            <input type="number" id="tenHours" class="time-display" value="0" min="0" max="9" />
+            <input type="number" id="hours" class="time-display" value="0" min="0" max="9" />
+            <span class="input-timer-prefix">시간</span>
+
+            <div class="arrow-buttons-wrraper">
+              <button class="arrow" onclick="increment('hours')">▲</button>
+              <button class="arrow" onclick="decrement('hours')">▼</button>
+            </div>
+          </div>
+
+          <div class="time-setter">
+            <input type="number" id="tenMinutes" class="time-display" value="0" min="0" max="5" />
+            <input type="number" id="minutes" class="time-display" value="0" min="0" max="9" />
+            <span class="input-timer-prefix">분</span>
+
+            <div class="arrow-buttons-wrraper">
+              <button class="arrow" onclick="increment('minutes')">▲</button>
+              <button class="arrow" onclick="decrement('minutes')">▼</button>
+            </div>
+          </div>
+
+          <div class="time-setter">
+            <input type="number" id="tenSeconds" class="time-display" value="0" min="0" max="5" />
+            <input type="number" id="seconds" class="time-display" value="0" min="0" max="9" />
+            <span class="input-timer-prefix">초</span>
+
+            <div class="arrow-buttons-wrraper">
+              <button class="arrow" onclick="increment('seconds')">▲</button>
+              <button class="arrow" onclick="decrement('seconds')">▼</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="timer-buttons-wrraper">
+          <button id="start-button" class="timer-button start" onclick="startTimer()">START</button>
+          <button id="stop-button" class="timer-button stop" onclick="stopTimer()">STOP</button>
+          <button id="reset-button" class="timer-button reset" onclick="resetTimer()">RESET</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
