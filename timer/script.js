@@ -8,9 +8,11 @@ document.querySelectorAll('.time-display').forEach((input) => {
 
 function handleInput(event) {
   const input = event.target;
-  if (input.value.length > 1) {
-    input.value = input.value.slice(-1);
-  }
+
+  const value = input.value.replace(/[^0-9]/g, ''); // 숫자가 아닌 문자는 제거
+
+  input.value = value.slice(-1); // 마지막 숫자만 남김
+
   toggleButtons();
 }
 
@@ -26,7 +28,15 @@ function increment(unit) {
     singleValue = 0;
     tenValue++;
 
-    if (tenValue >= 6 && (unit === 'minutes' || unit === 'seconds')) {
+    if (unit === 'hours' && tenValue >= 10 && singleUnit.value >= 0) {
+      tenValue = 0;
+      singleValue = 0;
+    }
+
+    if (unit === 'hours' && tenValue >= 10) {
+      tenValue = 0;
+      singleValue = 0;
+    } else if (unit !== 'hours' && tenValue >= 6) {
       tenValue = 0;
     }
   }
@@ -43,12 +53,16 @@ function decrement(unit) {
   let singleValue = parseInt(singleUnit.value);
 
   singleValue--;
+
   if (singleValue < 0) {
     singleValue = 9;
     tenValue--;
 
-    if (tenValue < 0) {
-      tenValue = unit === 'minutes' || unit === 'seconds' ? 5 : 9;
+    if (unit === 'hours' && tenValue < 0) {
+      tenValue = 9;
+      singleValue = 9;
+    } else if (unit !== 'hours' && tenValue < 0) {
+      tenValue = 5;
     }
   }
 
@@ -169,7 +183,6 @@ function arrowButtonsWrapperHide(hide) {
       wrraper.style.display = 'none';
     } else {
       wrraper.style.display = 'flex';
-      //
     }
   });
 }
