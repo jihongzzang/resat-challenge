@@ -169,6 +169,7 @@ function arrowButtonsWrapperHide(hide) {
       wrraper.style.display = 'none';
     } else {
       wrraper.style.display = 'flex';
+      //
     }
   });
 }
