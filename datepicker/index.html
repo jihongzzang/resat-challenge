@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>달력 메모</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="calendar-container">
+      <div id="calendar-header">
+        <button id="prev-month" aria-label="이전 달">&lt;</button>
+        <h2 id="month-year" aria-live="polite"></h2>
+        <button id="next-month" aria-label="다음 달">&gt;</button>
+      </div>
+      <div id="weekdays"></div>
+      <div id="calendar" role="grid" aria-label="달력"></div>
+    </div>
+    <div id="memo-container" style="display: none">
+      <h3 id="memo-date" aria-live="polite"></h3>
+      <textarea id="memo-text" rows="10" cols="30" aria-label="메모 내용"></textarea>
+      <button id="save-memo">저장</button>
+      <button id="close-memo">닫기</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
