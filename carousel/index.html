@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 슬라이더</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e" alt="Image 1" />
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Image 2" />
+        </div>
+        <div class="slide">
+          <img
+            src="https://images.unsplash.com/photo-1720937172267-575f3575386b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',"
+            alt="Image 3"
+          />
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1505245208761-ba872912fac0" alt="Image 4" />
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1" alt="Image 5" />
+        </div>
+      </div>
+      <a href="#" class="arrow prev">&lt;</a>
+      <a href="#" class="arrow next">&gt;</a>
+    </div>
+    <div class="select-container">
+      <label for="slideCount">한 화면에 표시할 슬라이드 수:</label>
+      <select id="slideCount">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
