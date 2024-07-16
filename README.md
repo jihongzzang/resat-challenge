@@ -88,4 +88,4 @@
 
 - 슬라이드 끝 부분에서는 슬라이드 이미지가 첫 번째 이미지로 순환되게 합니다.
 
-[로직 관련 코드](/carousel/script.js)
+[로직 관련 코드](/infinity-carousel/script.js)
